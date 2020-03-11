@@ -43,12 +43,12 @@ function checkFullName(){
 function checkEmail() {
   let isEmail = emailValidatorRegEx.test(email.value);
   return errorActivator(
-    function() {
+    function() {  // callback fuction
       return !isEmail;
     },
-    email,
-    emailHelp,
-    "Email is Invalid"
+    email, // reference to our email input field
+    emailHelp, // reference to our email small elemeent that shows error
+    "Email is Invalid" // our error message
   );
 }
 function checkPassword() {
